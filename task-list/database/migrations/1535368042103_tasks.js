@@ -8,6 +8,9 @@ class TasksTableSchema extends Schema {
     this.create('tasks', (table) => {
       table.increments()
       table.timestamps()
+      table.string('user_id')
+      table.string('title')
+      table.text('description')
     })
   }
 
