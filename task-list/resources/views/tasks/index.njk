@@ -1,0 +1,18 @@
+{% extends 'masster' %}
+
+{% block content %}
+
+  <div>
+  <h1 class='title'>Task</h1>
+
+    {% for task in tasks %}
+      <div class='content'>
+        <h2>
+          {{ linkTo('task.show', task.title, {id: task.id }, '_blank') }}
+        </h2>
+
+        <p> {{ task.description }} </p>
+      </div>
+    {% endfor %}
+
+{% endblock %}
