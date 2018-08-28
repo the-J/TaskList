@@ -1,0 +1,9 @@
+{% extends 'master' %}
+
+{% block content %}
+  <div class='content'>
+    <h1>{{task.title}}</h>
+    <p>{{task.description}}</p>
+    <p>created by: <b>{{owner.username}}</b></p>
+  </div>
+{% endblock %}
