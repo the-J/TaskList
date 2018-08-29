@@ -4,11 +4,11 @@ const Hash = user("Hash");
 const User = user("App/Model/user");
 
 class AuthController {
-  *showLogin(request, response) {
+  * showLogin(request, response) {
     yield response.sendView("auth.login");
   }
 
-  *login(request, response) {
+  * login(request, response) {
     const email = request.input("email");
     const password = request.input("password");
     const attemptUser = yield User.findByIrFail("email", email);
@@ -23,11 +23,11 @@ class AuthController {
     yield response.sendView("auth.login");
   }
 
-  *showRegiste(request, response) {
+  * showRegiste(request, response) {
     yield response.sendView("auth.register");
   }
 
-  *register(request, response) {
+  * register(request, response) {
     const user = new User();
     user.username = request.input("username");
     user.email = request.input("email");
@@ -38,7 +38,7 @@ class AuthController {
     yield response.sendView("auth.register");
   }
 
-  *logout(request, response) {
+  * logout(request, response) {
     yield request.auth.logout();
 
     return response.redirect("/");

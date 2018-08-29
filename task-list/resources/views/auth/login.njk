@@ -3,17 +3,22 @@
 {% block content %}
   <h1>Login</h1>
 
-  <form method='POST' action='/login'>
+    <form method="POST" action="/login">
 
-    {{ csfField }}
+    	{{ csrfField }}
 
-    <input type='email' placeholder='Email' name='email' class='input'>
-    <input type='password' placeholder='Password' name='password' class='input'>
+    	<input type='email' placeholder='Email' name='email' class='input'>
 
-    {% if error %}
-      <div class='notification is-danger'>{{ error }}</div>
-    {% endif %}
+    	<input type='password' placeholder='Password' name='password' class='input'>
 
-  </form>
+    	{% if error %}
+    	<div class="notification is-danger">
+			{{ error }}
+		</div>
+		{% endif %}
 
+    	<input type='submit' value='Submit'>
+
+	</form>
 {% endblock %}
+

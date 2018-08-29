@@ -1,7 +1,7 @@
 "use strict";
 
 class TaskController {
-  static get inject() {
+  static get inject () {
     return ["App/Model/Task", "App/Model/User"];
   }
 
@@ -10,12 +10,12 @@ class TaskController {
     this.User = User;
   }
 
-  *index(request, response) {
+  * index(request, response) {
     const task = yield this.Task.all();
     yield response.sendView("task.index", { task: task.toJSON() });
   }
 
-  *create(request, response) {
+  * create(request, response) {
     const isLoggedIn = yield request.auth.check();
 
     if (!isLoggedIn) {
@@ -23,7 +23,7 @@ class TaskController {
     }
   }
 
-  *store(request, response) {
+  * store(request, response) {
     const isLoggedIn = yield request.auth.check();
 
     if (!isLoggedIn) {
@@ -43,7 +43,7 @@ class TaskController {
     response.redirect("tasks");
   }
 
-  *show(request, response) {
+  * show(request, response) {
     const task = yield this.Tas.find(request.param("id"));
     const owner = yield this.User.find(task.user_id);
 
@@ -55,15 +55,15 @@ class TaskController {
     response.send("Sry, could not find selected found");
   }
 
-  *edit(request, response) {
+  * edit(request, response) {
     //
   }
 
-  *update(request, response) {
+  * update(request, response) {
     //
   }
 
-  *destroy(request, response) {
+  * destroy(request, response) {
     const isLoggedIn = yield request.auth.check();
 
     if (!isLoggedIn) {

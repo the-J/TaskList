@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>TaskList</title>
+  <title>Task List - Adonis.js</title>
 
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,12 +17,12 @@
   <div class='container'>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class='navbar-item' href='/'>Task List</a>
+        <a class='navbar-item' href='/'>Task Listr</a>
       </div>
       <div class='navbar-menu'>
         <div class='navbar-start'>
           <a class='navbar-item' href='/tasks'>Tasks</a>
-
+          
           {% if currentUser %}
             <a class='navbar-item' href='/tasks/create'>Create task</a>
           {% endif %}
