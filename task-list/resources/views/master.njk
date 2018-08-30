@@ -24,7 +24,7 @@
           <a class='navbar-item' href='/tasks'>Tasks</a>
           
           {% if currentUser %}
-            <a class='navbar-item' href='/tasks/create'>Create task</a>
+            <a class='navbar-item' href='/tasks/create'>Create new task</a>
           {% endif %}
         </div>
         <div class='navbar-end'>
@@ -46,7 +46,7 @@
         </div>
       </div>
     </nav>
-
+    
     <main>
       {% block content %}{% endblock %}
     </main>
