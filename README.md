@@ -9,7 +9,8 @@ This system alows users to login and add new tasks to one big tasks list. I unde
 
 * Adonisjs is very slow - I don't know why but loadding another pages sometimes requires to refresh browser (and it doesn't depened on starting mode);
 * System does not provide any feedback in console and terminal when in dev mode which makes it hard to debug;
-* View layer is boring and not fun to code, like in almost any new js framework. I suppose next step for me will be to connect it to ReactJS with GraphQL. 
+* View layer is boring and not fun to code, like in almost any new js framework. I suppose next step for me will be to connect it to ReactJS with GraphQL;
+* Even though there are just a few classes from Bulma it proven to be very limited (see navbar in lower widths).
 
 
 # Screenshots
