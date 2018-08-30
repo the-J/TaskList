@@ -1,6 +1,6 @@
 {
   "name": "task-list-with-adonis",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "server.js",
   "scripts": {
     "start": "echo \"\\033[31mWARN: 'start' will be depreciated soon. Instead use 'npm run serve'\" && npm run serve",

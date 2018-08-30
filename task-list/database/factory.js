@@ -12,7 +12,7 @@
 */
 
 const Factory = use('Factory')
- 
+
 Factory.blueprint('App/Model/User', (fake) => {
   return {
     username: fake.username(),
